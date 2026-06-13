@@ -1,6 +1,6 @@
 'use client';
 
-import { useChat } from 'ai/react';
+import { useChat } from '@ai-sdk/react';
 import { useWellnessStore } from '@/lib/store/useWellnessStore';
 import { useEffect, useRef } from 'react';
 import styles from './Chat.module.css';
@@ -8,12 +8,13 @@ import CrisisAlert from './CrisisAlert';
 
 export default function CompanionChat() {
   const { mood, triggers, setCrisisFlag, crisisFlag } = useWellnessStore();
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
+  const { messages, input, handleInputChange, handleSubmit, status } = useChat({
     api: '/api/chat',
     body: {
       data: { mood, triggers },
     },
   });
+  const isLoading = status === 'streaming' || status === 'submitted';
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
 

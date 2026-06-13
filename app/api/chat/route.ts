@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     const systemPrompt = COMPANION_SYSTEM_PROMPT + contextMessage;
 
     const result = await streamText({
-      model: google('models/gemini-1.5-pro'),
+      model: google('gemini-1.5-pro'),
       system: systemPrompt,
       messages,
     });

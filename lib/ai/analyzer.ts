@@ -13,7 +13,7 @@ export type AnalysisResult = z.infer<typeof analysisSchema>;
 
 export async function analyzeJournalEntry(entry: string): Promise<AnalysisResult> {
   const result = await generateObject({
-    model: google('models/gemini-1.5-flash'),
+    model: google('gemini-1.5-flash'),
     system: ANALYZER_SYSTEM_PROMPT,
     prompt: `Analyze the following journal entry:\n\n${entry}`,
     schema: analysisSchema,
