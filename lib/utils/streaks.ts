@@ -2,7 +2,7 @@
 export function calculateStreak(dates: string[]): number {
   if (dates.length === 0) return 0;
 
-  const sorted = [...new Set(dates)].sort().reverse(); // newest first
+  const sorted = Array.from(new Set(dates)).sort().reverse(); // newest first
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const todayStr = toDateString(today);

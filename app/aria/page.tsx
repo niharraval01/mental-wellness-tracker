@@ -20,7 +20,7 @@ export default function AriaPage() {
 
   const recentTriggers = useMemo(() => {
     const allTriggers = entries.slice(0, 5).flatMap((e) => e.triggers);
-    return [...new Set(allTriggers)].slice(0, 6);
+    return Array.from(new Set(allTriggers)).slice(0, 6);
   }, [entries]);
 
   const recentSummaries = useMemo(
