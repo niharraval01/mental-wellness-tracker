@@ -14,7 +14,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "ai": "^3.1.11",
-    "@ai-sdk/openai": "^0.0.14",
+    "@ai-sdk/google": "^0.0.18",
     "framer-motion": "^11.2.10",
     "lucide-react": "^0.390.0",
     "zod": "^3.23.8"

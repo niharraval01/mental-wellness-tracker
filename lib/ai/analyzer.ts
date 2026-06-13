@@ -1,5 +1,5 @@
 import { generateObject } from 'ai';
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
 import { z } from 'zod';
 import { ANALYZER_SYSTEM_PROMPT } from './prompts';
 
@@ -13,7 +13,7 @@ export type AnalysisResult = z.infer<typeof analysisSchema>;
 
 export async function analyzeJournalEntry(entry: string): Promise<AnalysisResult> {
   const result = await generateObject({
-    model: openai('gpt-4o-mini'),
+    model: google('models/gemini-1.5-flash'),
     system: ANALYZER_SYSTEM_PROMPT,
     prompt: `Analyze the following journal entry:\n\n${entry}`,
     schema: analysisSchema,

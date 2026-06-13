@@ -14,7 +14,7 @@ The system incorporates a strict fallback mechanism. If the AI detects severe di
 ## Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Styling**: Vanilla CSS Modules (Deep dark mode, Framer Motion transitions)
-- **AI Integration**: Vercel AI SDK (`ai`, `@ai-sdk/openai`)
+- **AI Integration**: Vercel AI SDK (`ai`, `@ai-sdk/google`)
 - **State Management**: React Context (`useWellnessStore`)
 - **Testing**: Vitest (`tests/analyzer.test.ts`)
 
@@ -22,5 +22,5 @@ The system incorporates a strict fallback mechanism. If the AI detects severe di
 This repository is optimized for immediate deployment on Vercel:
 1. Push to GitHub.
 2. Import project into Vercel.
-3. Add `OPENAI_API_KEY` to Vercel Environment Variables.
+3. Add `GOOGLE_GENERATIVE_AI_API_KEY` to Vercel Environment Variables.
 4. Deploy! The application uses Edge-compatible API routes for low-latency streaming.

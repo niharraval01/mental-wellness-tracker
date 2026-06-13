@@ -1,5 +1,5 @@
 import { streamText } from 'ai';
-import { openai } from '@ai-sdk/openai';
+import { google } from '@ai-sdk/google';
 import { COMPANION_SYSTEM_PROMPT } from '@/lib/ai/prompts';
 
 export const maxDuration = 30;
@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     const systemPrompt = COMPANION_SYSTEM_PROMPT + contextMessage;
 
     const result = await streamText({
-      model: openai('gpt-4o'),
+      model: google('models/gemini-1.5-pro'),
       system: systemPrompt,
       messages,
     });
