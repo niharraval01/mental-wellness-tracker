@@ -1,0 +1,58 @@
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .dashboardLayout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.insightsContainer {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.insightsTitle {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-lavender);
+  font-weight: 600;
+}
+
+.insightsSubtitle {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.tagCloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: rgba(180, 174, 232, 0.1);
+  color: var(--accent-lavender);
+  border: 1px solid rgba(180, 174, 232, 0.2);
+  padding: 0.35rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}

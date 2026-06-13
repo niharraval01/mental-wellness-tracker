@@ -1,0 +1,39 @@
+:root {
+  /* Deep dark mode theme */
+  --bg-primary: #0B0E14;
+  --bg-secondary: #151A22;
+  --bg-card: #1C232E;
+  
+  /* Calming accents */
+  --accent-lavender: #B4AEE8;
+  --accent-teal: #7AC7C4;
+  --accent-sage: #8FBC8F;
+  
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  
+  --border-subtle: #2A3441;
+  --error-soft: #EF4444;
+  --error-bg: #451a1a;
+  
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+button {
+  font-family: var(--font-sans);
+}
